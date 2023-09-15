@@ -13,6 +13,21 @@ function Footer() {
       </div>
 
       <div>
+        <h3>Resources</h3>
+        <Link href="#">Blog</Link>
+        <Link href="#">Developers</Link>
+        <Link href="#">Support</Link>
+      </div>
+
+      <div>
+        <h3>Company</h3>
+        <Link href="#">About</Link>
+        <Link href="#">Our Team</Link>
+        <Link href="#">Careers</Link>
+        <Link href="#">Contact</Link> 
+      </div>
+
+      <div>
         <img src="/images/icon-facebook.svg" />
         <img src="/images/icon-twitter.svg" />
         <img src="/images/icon-pinterest.svg" />
