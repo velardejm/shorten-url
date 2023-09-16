@@ -2,8 +2,8 @@ import Link from "next/link";
 
 function Header() {
   return (
-    <div>
-      <Link href="#">Shortly</Link>
+    <div className="flex justify-between">
+      <Link href="#"><img src="/images/logo.svg" /></Link>
       <button>Menu</button>
     </div>
   );
