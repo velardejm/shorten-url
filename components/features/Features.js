@@ -5,7 +5,7 @@ import CardContent from "./feature-cards/CardContent";
 
 function Features({ features }) {
   return (
-    <div className="px-5 bg-gray-100">
+    <div className="">
       {features.map((feature, index) => {
         const isLastItem = index === features.length - 1 ? true : false;
 

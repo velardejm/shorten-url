@@ -1,6 +1,6 @@
 function ShortenLink() {
   return (
-    <div>
+    <div className="bg-white flex flex-col">
       <input type="text" placeholder="Shorten a link here..." />
       <button>Shorten It!</button>
     </div>

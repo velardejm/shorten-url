@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 export default function Home({ features }) {
 
   return (
-    <div>
+    <div className="bg-gray-100 px-5">
       <Header />
       <Banner />
       <ShortenLink />
