@@ -6,13 +6,14 @@ import BoostLink from "@/components/BoostLink";
 import Footer from "@/components/Footer";
 
 export default function Home({ features }) {
-
   return (
-    <div className="bg-gray-100 px-5">
+    <div>
       <Header />
       <Banner />
-      <ShortenLink />
-      <Features features={features} />
+      <div className="bg-gray-100 px-5">
+        <ShortenLink />
+        <Features features={features} />
+      </div>
       <BoostLink />
       <Footer />
     </div>
