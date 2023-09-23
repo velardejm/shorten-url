@@ -10,7 +10,7 @@ export default function Home({ features }) {
     <div>
       <Header />
       <Banner />
-      <div className="bg-gray-100 px-5">
+      <div className="bg-gray-100 px-7">
         <ShortenLink />
         <Features features={features} />
       </div>
