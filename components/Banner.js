@@ -14,7 +14,7 @@ function Banner() {
           Build your brand’s recognition and get detailed insights on how your
           links are performing.
         </p>
-        <Link className="btn block w-48 mx-auto text-xl p-4" href="#">
+        <Link className="btn-2 p-4" href="#">
           Get Started
         </Link>
       </div>
