@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+import Header from "@/components/header/Header";
 import Banner from "@/components/Banner";
 import ShortenLink from "@/components/ShortenLink";
 import Features from "@/components/features/Features";
