@@ -19,5 +19,19 @@
       "description": "Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.",
       "iconUrl": "/images/icon-fully-customizable.svg"
     }
+  ],
+  "footerLinks": [
+    {
+      "header": "Features",
+      "linkDescriptions": ["Link Shortening", "Branded Links", "Analytics"]
+    },
+    {
+      "header": "Resources",
+      "linkDescriptions": ["Blog", "Developers", "Support"]
+    },
+    {
+      "header": "Company",
+      "linkDescriptions": ["About", "Our Team", "Careers", "Contact"]
+    }
   ]
 }

@@ -3,9 +3,9 @@ import Banner from "@/components/Banner";
 import ShortenLink from "@/components/ShortenLink";
 import Features from "@/components/features/Features";
 import BoostLink from "@/components/BoostLink";
-import Footer from "@/components/Footer";
+import Footer from "@/components/footer/Footer";
 
-export default function Home({ features }) {
+export default function Home({ features, footerLinks }) {
   return (
     <div>
       <Header />
@@ -15,7 +15,7 @@ export default function Home({ features }) {
         <Features features={features} />
       </div>
       <BoostLink />
-      <Footer />
+      <Footer footerLinks={footerLinks}/>
     </div>
   );
 }
@@ -28,6 +28,7 @@ export async function getStaticProps() {
   return {
     props: {
       features: objectData.features,
+      footerLinks: objectData.footerLinks
     },
   };
 }
