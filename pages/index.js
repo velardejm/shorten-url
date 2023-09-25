@@ -5,17 +5,31 @@ import Features from "@/components/features/Features";
 import BoostLink from "@/components/BoostLink";
 import Footer from "@/components/footer/Footer";
 
+import { useState } from "react";
+
 export default function Home({ features, footerLinks }) {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
+  function bodyClickHandler() {
+    if (isNavOpen) {
+      setIsNavOpen(!isNavOpen);
+    }
+  }
+
+  function navToggle() {
+    setIsNavOpen(!isNavOpen);
+  }
+
   return (
-    <div>
-      <Header />
+    <div onClick={bodyClickHandler}>
+      <Header navToggle={navToggle} isNavOpen={isNavOpen} />
       <Banner />
       <div className="bg-gray-100 px-7">
         <ShortenLink />
         <Features features={features} />
       </div>
       <BoostLink />
-      <Footer footerLinks={footerLinks}/>
+      <Footer footerLinks={footerLinks} />
     </div>
   );
 }
@@ -28,7 +42,7 @@ export async function getStaticProps() {
   return {
     props: {
       features: objectData.features,
-      footerLinks: objectData.footerLinks
+      footerLinks: objectData.footerLinks,
     },
   };
 }
