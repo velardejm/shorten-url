@@ -1,6 +1,6 @@
 import Header from "@/components/header/Header";
 import Banner from "@/components/Banner";
-import ShortenLink from "@/components/ShortenLink";
+import ShortenLink from "@/components/shorten-link/ShortenLink";
 import Features from "@/components/features/Features";
 import BoostLink from "@/components/BoostLink";
 import Footer from "@/components/footer/Footer";
