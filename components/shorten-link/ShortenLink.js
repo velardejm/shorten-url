@@ -24,6 +24,10 @@ function ShortenLink() {
 
   async function onClickHandler() {
 
+    if (input === '') {
+      return;
+    }
+
     const fetchResponse = await fetch(`/api/shorten/${input}`);
     const data = await fetchResponse.json();
     if (data.ok) {
@@ -32,7 +36,6 @@ function ShortenLink() {
         shortLink: data.result.full_short_link
       }
       setShortenedLinks([...shortenedLinks, newShortenedLink]);
-      console.log(shortenedLinks);
     } else {
       setErrorMsg(data.error);
       setIsError(true);
@@ -46,7 +49,7 @@ function ShortenLink() {
       <div className="bg-indigo-950 rounded-xl bg bg-[url('/images/bg-shorten-mobile.svg')] bg-[top_-25px_right_0px] flex flex-col p-4">
         <input onChange={onChangeHandler} onKeyDown={onKeyDownHandler} value={input} className="mb-4 rounded-lg p-2" type="text" placeholder="Shorten a link here..." />
         <p className={`italic text-red-400 relative -top-2 text-xs font-bold ${isError ? '' : 'hidden'}`}>{errorMsg}</p>
-        <button onClick={onClickHandler} className="btn rounded-lg">Shorten It!</button>
+        <button className="btn rounded-lg" onClick={onClickHandler}>Shorten It!</button>
       </div>
 
       <div className={`${shortenedLinks.length ? 'mt-5' : ''}`}>
