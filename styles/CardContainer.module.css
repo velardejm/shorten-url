@@ -1,0 +1,13 @@
+@media (min-width: 768px) {
+  .mdMarginTop1 {
+    margin-top: 50px;
+  }
+
+  .mdMarginTop2 {
+    margin-top: 100px;
+  }
+
+  .mdMarginTop3 {
+    margin-top: 150px;
+  }
+}
