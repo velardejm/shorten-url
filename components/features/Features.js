@@ -5,22 +5,27 @@ import CardContent from "./feature-cards/CardContent";
 
 function Features({ features }) {
   return (
-    <div className="">
-      {features.map((feature, index) => {
-        const isLastItem = index === features.length - 1 ? true : false;
+    <div>
+      <CardContent first feature={features[0]} />
+      <div className="md:flex">
+        {features.map((feature, index) => {
+          const isLastItem = index === features.length - 1 ? true : false;
 
-        if (index !== 0) {
-          return (
-            <CardContainer
-              feature={feature}
-              key={index}
-              isLastItem={isLastItem}
-            />
-          );
-        } else {
-          return <CardContent first feature={feature} key={index} />;
-        }
-      })}
+          if (index !== 0) {
+            return (
+              <CardContainer
+                feature={feature}
+                key={index}
+                isLastItem={isLastItem}
+                index={index}
+              />
+            );
+          } 
+          // else {
+          //   return <CardContent first feature={feature} key={index} />;
+          // }
+        })}
+      </div>
     </div>
   );
 }
