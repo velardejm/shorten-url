@@ -21,7 +21,7 @@ export default function CardContainer({ feature, isLastItem, index }) {
 
   return (
     <>
-      <div className={`bg-white pb-10 h-min ${setMarginTop()}`}>
+      <div className={`bg-white pb-10 h-min basis-full ${setMarginTop()}`}>
         <CardIcon iconUrl={feature.iconUrl} />
         <CardContent feature={feature} />
       </div >

@@ -44,13 +44,13 @@ function ShortenLink() {
   }
 
   return (
-    <div className="rounded-xl relative -top-16">
-      <div className="bg-indigo-950 rounded-xl bg bg-[url('/images/bg-shorten-mobile.svg')] bg-[top_-25px_right_0px] flex flex-col p-4 align-center md:flex-row">
+    <div className="rounded-xl relative -top-16 md:mx-16 md:-top-14">
+      <div className="bg-indigo-950 rounded-lg bg bg-[url('/images/bg-shorten-mobile.svg')] bg-[top_-25px_right_0px] flex flex-col p-4 align-center md:flex-row md:p-8">
         <input
           onChange={onChangeHandler}
           onKeyDown={onKeyDownHandler}
           value={input}
-          className="mb-4 rounded-lg p-2 md:mb-0 md:grow"
+          className="mb-4 rounded-lg p-2 md:mb-0 md:grow mr-5"
           type="text"
           placeholder="Shorten a link here..."
         />
