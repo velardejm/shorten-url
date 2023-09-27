@@ -24,7 +24,7 @@ export default function Home({ features, footerLinks }) {
     <div onClick={bodyClickHandler} className="">
       <Header navToggle={navToggle} isNavOpen={isNavOpen} />
       <Banner />
-      <div className="bg-gray-100 px-7">
+      <div className="bg-gray-100 px-7 md:px-24">
         <ShortenLink />
         <Features features={features} />
       </div>

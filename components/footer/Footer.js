@@ -2,17 +2,19 @@ import Link from "next/link";
 
 function Footer({ footerLinks }) {
   return (
-    <div className="text-center text-white bg-gray-800 md:flex">
-      <Link className="font-bold text-3xl py-6 block" href="#">Shortly</Link>
+    <div className="text-center text-white bg-gray-800 md:flex justify-between px-16 pt-10">
+      <div className="grow-[2]">
+        <Link className="font-bold text-3xl mb-6 inline-block" href="#">Shortly</Link>
+      </div>
 
       {
         footerLinks.map((links, index) => {
           return (
-            <div className="mb-10" key={index}>
+            <div className="mb-10 grow-[1]" key={index}>
               <h3 className="font-bold mb-3">{links.header}</h3>
               {
                 links.linkDescriptions.map((description, index) => {
-                  return <Link className="block mb-2" href="#" key={index}>{description}</Link>
+                  return <Link className="block mb-2 w-max mx-auto" href="#" key={index}>{description}</Link>
                 })
               }
             </div>
@@ -22,10 +24,10 @@ function Footer({ footerLinks }) {
 
       <div>
         <div className="flex justify-center pb-12">
-          <img className="pr-5" src="/images/icon-facebook.svg" />
-          <img className="pr-5" src="/images/icon-twitter.svg" />
-          <img className="pr-5" src="/images/icon-pinterest.svg" />
-          <img className="pr-5" src="/images/icon-instagram.svg" />
+          <Link className="mr-5" href="#"><img src="/images/icon-facebook.svg" /></Link>
+          <Link className="mr-5" href="#"><img src="/images/icon-twitter.svg" /></Link>
+          <Link className="mr-5" href="#"><img src="/images/icon-pinterest.svg" /></Link>
+          <Link className="mr-5" href="#"><img src="/images/icon-instagram.svg" /></Link>
         </div>
       </div>
     </div>

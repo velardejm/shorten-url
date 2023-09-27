@@ -5,7 +5,7 @@ import CardContent from "./feature-cards/CardContent";
 
 function Features({ features }) {
   return (
-    <div>
+    <div className="pb-20">
       <CardContent first feature={features[0]} />
       <div className="md:flex">
         {features.map((feature, index) => {
