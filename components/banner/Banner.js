@@ -2,7 +2,7 @@ import Link from "next/link";
 
 function Banner() {
   return (
-    <div className="md:flex md:flex-row-reverse items-center mb-36 text-center md:text-left md:px-16">
+    <div className="mb-36 items-center text-center md:flex md:flex-row-reverse md:px-16 md:text-left">
       <div>
         <img
           className="max-w-none w-[135%] pl-5"

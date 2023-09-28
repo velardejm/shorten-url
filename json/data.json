@@ -33,5 +33,11 @@
       "header": "Company",
       "linkDescriptions": ["About", "Our Team", "Careers", "Contact"]
     }
+  ],
+  "footerIcons": [
+    "/images/icon-facebook.svg",
+    "/images/icon-twitter.svg",
+    "/images/icon-pinterest.svg",
+    "/images/icon-instagram.svg"
   ]
 }

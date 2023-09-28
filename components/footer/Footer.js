@@ -1,8 +1,9 @@
 import Link from "next/link";
 
-function Footer({ footerLinks }) {
+export default function Footer({ footerLinks, footerIcons }) {
   return (
     <div className="text-center text-white bg-gray-800 md:flex justify-between px-16 pt-10">
+
       <div className="grow-[2]">
         <Link className="font-bold text-3xl mb-6 inline-block" href="#">Shortly</Link>
       </div>
@@ -22,16 +23,15 @@ function Footer({ footerLinks }) {
         })
       }
 
-      <div>
-        <div className="flex justify-center pb-12">
-          <Link className="mr-5" href="#"><img src="/images/icon-facebook.svg" /></Link>
-          <Link className="mr-5" href="#"><img src="/images/icon-twitter.svg" /></Link>
-          <Link className="mr-5" href="#"><img src="/images/icon-pinterest.svg" /></Link>
-          <Link className="mr-5" href="#"><img src="/images/icon-instagram.svg" /></Link>
-        </div>
+      <div className="flex justify-center pb-12">
+        {
+          footerIcons.map((icon, index) => {
+            return <Link className="mr-5" href="#"><img src={icon} key={index} /></Link>
+          })
+        }
       </div>
+
     </div>
+
   );
 }
-
-export default Footer;

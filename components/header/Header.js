@@ -1,6 +1,7 @@
 import Link from "next/link";
 import MobileNavigation from "./MobileNavigation";
 import Navigation from "./Navigation";
+import NavButton from "./NavButton";
 
 function Header({ navToggle, isNavOpen }) {
   return (
@@ -9,14 +10,7 @@ function Header({ navToggle, isNavOpen }) {
         <img src="/images/logo.svg" />
       </Link>
 
-      <button
-        onClick={navToggle}
-        className="space-y-2 inline-block hover:cursor-pointer md:hidden"
-      >
-        <div className="w-8 h-1 bg-gray-600"></div>
-        <div className="w-8 h-1 bg-gray-600"></div>
-        <div className="w-8 h-1 bg-gray-600"></div>
-      </button>
+      <NavButton navToggle={navToggle} />
 
       <MobileNavigation isNavOpen={isNavOpen} />
       <Navigation />

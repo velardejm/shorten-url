@@ -1,13 +1,13 @@
 import Header from "@/components/header/Header";
-import Banner from "@/components/Banner";
+import Banner from "@/components/banner/Banner";
 import ShortenLink from "@/components/shorten-link/ShortenLink";
 import Features from "@/components/features/Features";
-import BoostLink from "@/components/BoostLink";
+import BoostLink from "@/components/boost-link/BoostLink";
 import Footer from "@/components/footer/Footer";
 
 import { useState } from "react";
 
-export default function Home({ features, footerLinks }) {
+export default function Home({ features, footerLinks, footerIcons }) {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   function bodyClickHandler() {
@@ -29,7 +29,7 @@ export default function Home({ features, footerLinks }) {
         <Features features={features} />
       </div>
       <BoostLink />
-      <Footer footerLinks={footerLinks} />
+      <Footer footerLinks={footerLinks} footerIcons={footerIcons} />
     </div>
   );
 }
@@ -43,6 +43,7 @@ export async function getStaticProps() {
     props: {
       features: objectData.features,
       footerLinks: objectData.footerLinks,
+      footerIcons: objectData.footerIcons
     },
   };
 }

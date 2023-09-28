@@ -10,9 +10,8 @@ export default function MobileNavigation({ isNavOpen }) {
   return (
     <>
       <div
-        className={`absolute w-full ${
-          !isNavOpen ? "hidden" : ""
-        } top-20 left-0 md:hidden`}
+        className={`absolute w-full ${!isNavOpen ? "hidden" : ""
+          } top-20 left-0 md:hidden`}
         onClick={navBodyClickHandler}
       >
         <div className="flex flex-col items-center font-bold text-white bg-indigo-950 px-8 py-10 rounded-lg mx-5 mb-5">
@@ -27,6 +26,7 @@ export default function MobileNavigation({ isNavOpen }) {
           <Link className="py-7 w-full text-center border-t" href="#">
             Login
           </Link>
+
           <Link className="btn w-full max-w-[300px] text-center" href="#">
             Sign Up
           </Link>
